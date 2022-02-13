@@ -1,0 +1,117 @@
+ /* Global styles  */
+
+body {
+    background-color: #e2dfec;
+    margin: 0;
+    padding: 0%;
+    overflow-x: hidden;
+    
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+   
+}
+.footer{
+    justify-self: flex-end;
+    position: relative;
+    
+}
+
+/* head */
+
+.headWrapper {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+   
+    
+}
+
+.toggle {
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.toggle h6 {
+    letter-spacing: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    font-size: 100%;
+    flex-wrap: wrap;
+}
+
+.headWrapper img {
+    padding-left: 3%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+}
+
+/* for switch */
+
+input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 65px;
+    height: 35px;
+    background:#e2dfec;   
+     box-shadow: 3px 3px 10px #6f6d74, -3px -3px 10px #ffffff, inset 3px 3px 10px #6f6d74, inset -3px -3px 10px #ffffff!important;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+}
+
+label:after {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 5px;
+    width: 23px;
+    height: 23px;
+    background: #e2dfec;
+    border-radius: 50px;
+    transition: 0.2s;
+    justify-self: flex-end;
+    box-shadow:   3px 3px 10px #6f6d74,  -3px -3px 10px #ffffff!important;
+
+}
+
+input:checked+label {
+    background: #e2dfec;
+}
+
+input:checked+label:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+    background: #7507b5;
+    box-shadow:   3px 3px 10px #6f6d74,  -3px -3px 10px #ffffff!important;
+
+}
+
+label:active:after {
+    width: 50px;
+    box-shadow:   3px 3px 10px #6f6d74,  -3px -3px 10px #ffffff!important;
+
+}
+@media(max-width:768px){
+    .headWrapper{
+        justify-content: center;
+        padding-bottom: 5%;
+    }
+}
